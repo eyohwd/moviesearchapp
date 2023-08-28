@@ -2,6 +2,7 @@ import {  Delete, DeleteOutline, Favorite, FavoriteBorder } from '@mui/icons-mat
 import { Checkbox } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
+import { mobile } from "../responsive";
 
 
 const FavIcon = styled.div`
@@ -31,6 +32,8 @@ const Container = styled.div`
   &:hover ${FavIcon}{
      opacity: 1;
   };
+  ${mobile({Width: "100%", justifyContent: "center"})}
+ 
 
   
 `;
@@ -43,6 +46,7 @@ const InfoContainer = styled.div`
    color: gray;
    background-color: black;
    padding: 3px 5px;
+   ${mobile({width: "100%"})}
 
   
 `;
@@ -56,6 +60,8 @@ const FavouriteConatainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+  
+   
     
     
 
@@ -66,6 +72,8 @@ const FavouriteConatainer = styled.div`
 const FavouriteTitle = styled.h4`
     color: white;
     font-weight: 300;
+    
+    ${mobile({width: "300px"})}
  `;
 
 const Title = styled.div`
@@ -75,6 +83,7 @@ const Title = styled.div`
 const Image = styled.img`
 width: 100%;
 height: 80%;
+${mobile({maxWidth: "100%", height:"280px"})}
 `;
 const Date = styled.p`
 

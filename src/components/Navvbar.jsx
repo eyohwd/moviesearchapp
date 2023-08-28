@@ -8,31 +8,52 @@ import { signOut } from "firebase/auth";
 import { auth } from '../firebase';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { mobile } from "../responsive";
 
 const Container= styled.div`
    height: 50px;
    border-bottom: 0.5px solid gray;
+   
    background-color: #111;
+   ${mobile({ width: "100%"})}
 
   `;
 
 const Wrapper= styled.div`
 padding: 10px 20px;
 display: flex;
+justify-content: center;
+${mobile({justifyContent: "center"})}
+${mobile({width: "100%"})}
+
 `;
+
 
 const Left= styled.div`
   flex: 1;
+  
+  ${mobile({flex: "1", marginRight:"5px"})}
+  ${mobile({width: "100px"})}
+  
+  
 `;
 
-const SearchContainer= styled.div`
+const SearchContainer = styled.div`
   border: 1px solid gray;
-  display: flex; 
+  
   align-items: center;
-  justify-content: space-between;
+
+  justify-content: center;
+  background-color: red;
   width: 40%;
   padding: 3px;
-`;
+  ${mobile({width: "100%"})}
+  ${mobile({height: "30px"})}
+  ${mobile({paddingRight: "10px"})}
+  
+
+ `;
+
 
 const Input= styled.input`
   border: none;
@@ -40,7 +61,10 @@ const Input= styled.input`
   padding: 3px;
   margin-right: 25px;
   background-color: transparent;
-  color: white;
+  ${mobile({marginRight: "25px"})}
+  ${mobile({justifyContent: "center"})}
+  
+
 `;
 
 const Right= styled.div`
@@ -48,6 +72,9 @@ const Right= styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${mobile({flex: "1"})}
+  ${mobile({marginLeft: "5px"})}
+  
   
 
 `;
@@ -56,12 +83,14 @@ const Items= styled.div`
    margin-right: 20px;
    cursor: pointer;
    color: gray;
+   ${mobile({marginRight: "5px"})}
 `;
 
 const Avater = styled.img`
    hight: 30px;
    width: 30px;
    border-radius: 50%;
+   ${mobile({display: "none"})}
 
 `;
 
@@ -88,7 +117,7 @@ signOut(auth).then(() => {
             <Left>
                 <SearchContainer>
                   <Input type='text' placeholder='search...'  onChange={(e) => setSearchValue(e.target.value)}></Input>
-                  <SearchOutlined/>
+                  <SearchOutlined style={{display: "none"}} />
                 </SearchContainer>
             </Left>
             <Right>
@@ -105,8 +134,8 @@ signOut(auth).then(() => {
                 </Link>
                 
                 <Items>
-                    <Badge badgeContent={2} color="error">
-                     <NotificationsOutlined/>
+                    <Badge badgeContent={2} color="error" style={{display: "none"}}>
+                     <NotificationsOutlined style={{display: "none"}}/>
                    </Badge>
                 </Items>
                 <Items>

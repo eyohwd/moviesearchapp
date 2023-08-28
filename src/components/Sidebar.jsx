@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { mobile } from "../responsive";
+
 
 const Container = styled.div`
   flex: 1;
   border-right: 0.5px solid gray;
   min-height: 100vh;
+  ${mobile({display: "none"})}
 `;
 const Top = styled.div`
   height: 50px;

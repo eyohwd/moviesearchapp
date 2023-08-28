@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 //import Leftbar from '../components/Leftbar';
 //import Navbar from '../components/Navbar';
 //import UserList from '../components/UserList';
+import { mobile } from "../responsive";
+
 
 import Sidebar from "../components/Sidebar";
 import styled from "styled-components";
@@ -12,9 +14,20 @@ import FavouriteMovieGrid from "../components/FavouriteMovieGrid";
 const HomePage = styled.div`
   display: flex;
   width: 100%;
+  ${mobile({width:"100%",})}
+  ${mobile({ alignItems:"center"})}
+  ${mobile({ justifyContent:"center"})}
+
+  
+
 `;
 const HomeContainer = styled.div`
   flex: 6;
+
+  
+  ${mobile({flex:"1",})}
+ 
+ 
 `;
 
 const Container = styled.div`
@@ -22,6 +35,9 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
+  ${mobile({flexDirection: "column", with: "100%"})}
+  ${mobile({ padding: "0px"})}
+
 `;
 
 const ContainerMovie = styled.div`
@@ -30,6 +46,10 @@ const ContainerMovie = styled.div`
    flex-wrap: wrap;
    padding: 20px
    gap: 20px;
+   ${mobile({flexDirection: "column",})}
+   ${mobile({gap: "5px",})}
+   
+   
 `;
 
 const Home = () => {

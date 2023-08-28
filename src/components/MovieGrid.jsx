@@ -2,6 +2,7 @@ import { Favorite, FavoriteBorder } from '@mui/icons-material';
 import { Checkbox } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
+import { mobile } from "../responsive";
 
 
 const FavIcon = styled.div`
@@ -31,7 +32,7 @@ const Container = styled.div`
   &:hover ${FavIcon}{
      opacity: 1;
   };
-
+  ${mobile({height: "350px"})}
   
 `;
 
@@ -43,6 +44,7 @@ const InfoContainer = styled.div`
    color: gray;
    background-color: black;
    padding: 3px 5px;
+   ${mobile({width:"100%"})}
 
   
 `;
@@ -56,6 +58,8 @@ const FavouriteConatainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    ${mobile({width: "350px", height:"350px"})}
+    
     
     
 
@@ -66,6 +70,7 @@ const FavouriteConatainer = styled.div`
 const FavouriteTitle = styled.h4`
     color: white;
     font-weight: 300;
+    ${mobile({fontWeight: "200px"})}
  `;
 
 const Title = styled.div`
@@ -75,9 +80,11 @@ const Title = styled.div`
 const Image = styled.img`
 width: 100%;
 height: 80%;
+${mobile({maxWidth: "350px", height:"280px"})}
+
 `;
 const Date = styled.p`
-
+${mobile({with: "350px", height:"280px"})}
 `;
 
 const MovieGrid = ({item, movie, handleFavouriteClick}) => {
