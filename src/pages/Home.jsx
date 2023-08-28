@@ -60,7 +60,7 @@ const Home = () => {
   const getMovies = async (searchValue) => {
     try {
       const response = await fetch(
-        `http://www.omdbapi.com/?s=${searchValue}&apikey=a8d46f67`
+        `http://www.omdbapi.com/?s=${searchValue}&apikey=${process.env.REACT_APP_MOVIE}`
       );
       const json = await response.json();
       if (json.Search) {
