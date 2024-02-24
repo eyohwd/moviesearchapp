@@ -8,6 +8,7 @@ const Container = styled.div`
   flex: 1;
   border-right: 0.5px solid gray;
   min-height: 100vh;
+  
   ${mobile({display: "none"})}
 `;
 const Top = styled.div`
@@ -31,15 +32,15 @@ const LogoBotton = styled.hr`
 `;
 
 const Center = styled.div`
- display: flex;
- align-items: center;
- justify-content: center;
+ 
  margin-top: 20px;
+ 
 `;
 const List = styled.ul`
-margin: 0;
-padding: 0;
+margin: 0px;
+padding: 0px;
 list-style: none;
+
 `;
 const Items = styled.li`
 margin-bottom: 10px;
@@ -47,6 +48,7 @@ font-size: 20px;
 font-weight: 300;
 width: 100%;
 cursor: pointer;
+padding-left: 10px;
 color: gray;
 &:hover{
   background-color: lightgray;

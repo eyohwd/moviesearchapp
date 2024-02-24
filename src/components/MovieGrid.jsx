@@ -19,7 +19,7 @@ const FavIcon = styled.div`
 
 const Container = styled.div`
   flex: 1;
-  min-width: 280px;
+ min-width: 280px;
   margin: 3px;
   height: 350px;
   transition: all 0.5s ease;
@@ -44,7 +44,7 @@ const InfoContainer = styled.div`
    color: gray;
    background-color: black;
    padding: 3px 5px;
-   ${mobile({width:"100%"})}
+  ${mobile({height: "30px", width: "100%"})}
 
   
 `;
@@ -84,7 +84,7 @@ ${mobile({maxWidth: "350px", height:"280px"})}
 
 `;
 const Date = styled.p`
-${mobile({with: "350px", height:"280px"})}
+
 `;
 
 const MovieGrid = ({item, movie, handleFavouriteClick}) => {
